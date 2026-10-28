@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project - 12: Executive Decision Intelligence | Hindustan Unilever</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        
+        <!-- Top Executive Header -->
+        <header class="top-header">
+            <div class="brand-wrapper">
+                <div class="brand-logo">
+                    <!-- HUL Emblem SVG -->
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                    </svg>
+                </div>
+                <div class="brand-titles">
+                    <h1>Project - 12: Executive Decision Intelligence</h1>
+                    <p>Hindustan Unilever Limited — LLM-Powered Operational KPI to Financial Transmission Engine</p>
+                </div>
+            </div>
+            <div class="header-actions">
+                <div class="badge-live">
+                    <span class="live-dot"></span>
+                    <span>AI Engine Live | Port 5012</span>
+                </div>
+                <a href="/api/download_report" class="btn-download-pdf" id="downloadReportBtn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="12" y1="18" x2="12" y2="12"></line>
+                        <line x1="9" y1="15" x2="15" y2="15"></line>
+                    </svg>
+                    Download Executive PDF Report
+                </a>
+            </div>
+        </header>
+
+        <!-- Problem Statement Banner -->
+        <div class="problem-alert-box">
+            <div class="problem-alert-title">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L1 21h22L12 2zm0 3.99L19.53 19H4.47L12 5.99zM11 10v4h2v-4h-2zm0 6v2h2v-2h-2z"/>
+                </svg>
+                <span>HUL SENIOR MANAGEMENT PROBLEM STATEMENT & MANDATE</span>
+            </div>
+            <div class="problem-statement-text">
+                "Hindustan Unilever Senior management receives hundreds of KPIs from different departments but cannot identify which indicators actually explain changes in business performance. Develop an LLM-powered decision-intelligence system that connects operational KPIs with financial outcomes and generates evidence-based executive insights."
+            </div>
+        </div>
+
+        <!-- 4 Top Executive Financial Metric Cards -->
+        <div class="kpi-grid">
+            <div class="kpi-card" id="card-revenue">
+                <div class="kpi-label">Quarterly Net Revenue</div>
+                <div class="kpi-value" id="kpi-val-revenue">₹14,650 Cr</div>
+                <div class="kpi-meta"><span class="badge-good">+3.8% UVG</span> vs ₹14,110 Cr Q-1</div>
+            </div>
+            <div class="kpi-card" id="card-ebitda">
+                <div class="kpi-label">Operating EBITDA Margin</div>
+                <div class="kpi-value" id="kpi-val-ebitda">23.40%</div>
+                <div class="kpi-meta"><span class="badge-danger">-110 bps</span> below budget target</div>
+            </div>
+            <div class="kpi-card" id="card-gross">
+                <div class="kpi-label">Gross Profit Margin</div>
+                <div class="kpi-value" id="kpi-val-gross">51.20%</div>
+                <div class="kpi-meta"><span class="badge-amber">38% Basket</span> LAB & Palm Exposed</div>
+            </div>
+            <div class="kpi-card" id="card-fcf">
+                <div class="kpi-label">Operating Free Cash Flow</div>
+                <div class="kpi-value" id="kpi-val-fcf">₹2,420 Cr</div>
+                <div class="kpi-meta"><span class="badge-good">₹540 Cr</span> Trapped in DWC</div>
+            </div>
+        </div>
+
+        <!-- Section: The KPI Paradox & Vanity Metric Audit -->
+        <div class="section-card">
+            <div class="section-header">
+                <div>
+                    <h2>1. The FMCG KPI Paradox: Departmental Green vs Financial Red</h2>
+                    <p class="section-sub">Demonstrating how siloed departmental vanity metrics mislead executive leadership</p>
+                </div>
+                <span class="badge-tag">Signal-to-Noise Ratio: 84.7% in 7 KPIs</span>
+            </div>
+            <div class="grid-2col">
+                <div class="chart-box">
+                    <canvas id="chartParadox"></canvas>
+                </div>
+                <div class="vanity-audit-box">
+                    <div class="audit-title">Misleading Vanity Metrics Audited by Decision AI</div>
+                    <div class="audit-item">
+                        <div class="audit-item-header">
+                            <span class="audit-metric">Plant OEE Efficiency (86.5%)</span>
+                            <span class="badge-danger">Vanity Noise (#17)</span>
+                        </div>
+                        <div class="audit-body">
+                            <b>Department Claim:</b> Met world-class manufacturing equipment uptime benchmarks.<br/>
+                            <b>The Reality:</b> R² correlation is near zero (r = 0.118). Plants maxed OEE by churning bulk low-margin laundry bars, causing a 7.8% stockout in high-margin Surf Liquids & Dove Serums.
+                        </div>
+                    </div>
+                    <div class="audit-item">
+                        <div class="audit-item-header">
+                            <span class="audit-metric">Direct Kirana Reach (2.45M Stores)</span>
+                            <span class="badge-danger">Vanity Noise (#19)</span>
+                        </div>
+                        <div class="audit-body">
+                            <b>Department Claim:</b> Added +6.2% retail store doors YoY.<br/>
+                            <b>The Reality:</b> Secondary sell-through stalled because distributor credit froze at 21.8 days. Store doors without channel liquidity become deadstock.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section: AI Causal Attribution & Financial Waterfall -->
+        <div class="grid-2col">
+            <div class="section-card">
+                <div class="section-header">
+                    <div>
+                        <h2>2. The Vital Few Causal Drivers</h2>
+                        <p class="section-sub">Decomposing 84.7% of EBITDA variance across operational levers</p>
+                    </div>
+                </div>
+                <div class="chart-box">
+                    <canvas id="chartAttribution"></canvas>
+                </div>
+            </div>
+
+            <div class="section-card">
+                <div class="section-header">
+                    <div>
+                        <h2>3. Financial Friction Waterfall</h2>
+                        <p class="section-sub">Causal leakage tracing operational friction to bottom-line EBITDA</p>
+                    </div>
+                </div>
+                <div class="chart-box">
+                    <canvas id="chartWaterfall"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section: Real-Time Counterfactual Scenario Stress Simulator -->
+        <div class="section-card" id="scenario-section">
+            <div class="section-header">
+                <div>
+                    <h2>4. Real-Time Counterfactual Scenario Stress Simulator</h2>
+                    <p class="section-sub">Adjust operational levers to simulate live financial bottom-line impacts</p>
+                </div>
+                <button class="btn-secondary" id="btnResetSimulator">Reset to Baseline</button>
+            </div>
+
+            <div class="simulator-layout">
+                <div class="sliders-container">
+                    <div class="slider-group">
+                        <div class="slider-label-row">
+                            <span>Focus SKU Stockout Rate (%)</span>
+                            <span class="slider-val" id="val-stockout">6.5%</span>
+                        </div>
+                        <input type="range" id="slider-stockout" min="1.0" max="14.0" step="0.5" value="6.5">
+                        <div class="slider-hint">High margin SKU on-shelf availability (-48.2 bps EBITDA per 1%)</div>
+                    </div>
+
+                    <div class="slider-group">
+                        <div class="slider-label-row">
+                            <span>Secondary OTIF Delivery (%)</span>
+                            <span class="slider-val" id="val-otif">89.2%</span>
+                        </div>
+                        <input type="range" id="slider-otif" min="78.0" max="98.0" step="0.5" value="89.2">
+                        <div class="slider-hint">On-Time In-Full depot delivery (+22.4 bps EBITDA per 1%)</div>
+                    </div>
+
+                    <div class="slider-group">
+                        <div class="slider-label-row">
+                            <span>Commodity Hedging Coverage (%)</span>
+                            <span class="slider-val" id="val-hedging">62.0%</span>
+                        </div>
+                        <input type="range" id="slider-hedging" min="30.0" max="90.0" step="2.0" value="62.0">
+                        <div class="slider-hint">Derivative shields on Palm & LAB (+18.5 bps Gross Margin per 10%)</div>
+                    </div>
+
+                    <div class="slider-group">
+                        <div class="slider-label-row">
+                            <span>Distributor Working Capital (Days)</span>
+                            <span class="slider-val" id="val-wc">21.8 d</span>
+                        </div>
+                        <input type="range" id="slider-wc" min="12.0" max="32.0" step="0.5" value="21.8">
+                        <div class="slider-hint">Channel credit liquidity (-31.0 bps EBITDA when &gt; 22 days)</div>
+                    </div>
+
+                    <div class="slider-group">
+                        <div class="slider-label-row">
+                            <span>Shikhar B2B App Order Share (%)</span>
+                            <span class="slider-val" id="val-shikhar">34.0%</span>
+                        </div>
+                        <input type="range" id="slider-shikhar" min="18.0" max="70.0" step="1.0" value="34.0">
+                        <div class="slider-hint">Digital order automation (+12.8 bps EBITDA per 5% gain)</div>
+                    </div>
+
+                    <div class="slider-group">
+                        <div class="slider-label-row">
+                            <span>Trade Scheme Discount Depth (%)</span>
+                            <span class="slider-val" id="val-discount">7.8%</span>
+                        </div>
+                        <input type="range" id="slider-discount" min="4.0" max="13.0" step="0.2" value="7.8">
+                        <div class="slider-hint">Wholesale promotional spend (-42.6 bps EBITDA erosion per 1%)</div>
+                    </div>
+                </div>
+
+                <div class="simulation-results-card">
+                    <div class="sim-header">
+                        <div class="sim-title">Projected Financial Bottom-Line</div>
+                        <div class="sim-status-badge" id="sim-status-badge">BALANCED EFFICIENCY</div>
+                    </div>
+
+                    <div class="sim-metrics-grid">
+                        <div class="sim-stat">
+                            <span class="stat-name">Projected Revenue</span>
+                            <span class="stat-value" id="sim-proj-revenue">₹14,650 Cr</span>
+                            <span class="stat-delta" id="sim-delta-revenue">±₹0.0 Cr</span>
+                        </div>
+                        <div class="sim-stat">
+                            <span class="stat-name">Projected EBITDA Margin</span>
+                            <span class="stat-value" id="sim-proj-ebitda">23.40%</span>
+                            <span class="stat-delta" id="sim-delta-ebitda">±0 bps</span>
+                        </div>
+                        <div class="sim-stat">
+                            <span class="stat-name">Projected EBITDA (Cr)</span>
+                            <span class="stat-value" id="sim-proj-ebitda-cr">₹3,428 Cr</span>
+                            <span class="stat-delta" id="sim-delta-ebitda-cr">±₹0.0 Cr</span>
+                        </div>
+                        <div class="sim-stat">
+                            <span class="stat-name">Projected Free Cash Flow</span>
+                            <span class="stat-value" id="sim-proj-fcf">₹2,420 Cr</span>
+                            <span class="stat-delta" id="sim-delta-fcf">±₹0.0 Cr</span>
+                        </div>
+                    </div>
+
+                    <div class="sim-memo-box">
+                        <div class="sim-memo-title">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="16" x2="12" y2="12"></line>
+                                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                            </svg>
+                            AI Diagnostic Assessment
+                        </div>
+                        <div class="sim-memo-text" id="sim-memo-text">
+                            Baseline configuration active. Adjust operational sliders to stress test HUL quarterly profitability and simulate counterfactual recovery paths.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section: LLM-Powered Executive Insight Terminal -->
+        <div class="section-card">
+            <div class="section-header">
+                <div>
+                    <h2>5. LLM-Powered Executive Insight Terminal</h2>
+                    <p class="section-sub">Natural Language Decision Intelligence grounded in econometric evidence</p>
+                </div>
+                <span class="badge-tag">LLM Grounding: Causal Attributions + Elasticities</span>
+            </div>
+
+            <!-- Quick Questions Pills -->
+            <div class="quick-questions-wrapper">
+                <span class="quick-label">Executive Inquiries:</span>
+                <button class="pill-btn" data-query="Why did plant OEE fail to drive profitability in Home Care?">Plant OEE Paradox</button>
+                <button class="pill-btn" data-query="What explains Quick Commerce revenue loss and shelf stockouts?">Quick Commerce Choke Points</button>
+                <button class="pill-btn" data-query="How does distributor working capital impact our bottom line?">Distributor Credit Stagnation</button>
+                <button class="pill-btn" data-query="Which top 3 vital KPIs should the CEO monitor every Monday?">CEO Vital Few Dashboard</button>
+                <button class="pill-btn" data-query="What is the financial danger of increasing trade discounts?">Trade Discount Leakage</button>
+            </div>
+
+            <!-- Query Input -->
+            <div class="terminal-input-bar">
+                <input type="text" id="terminalInput" placeholder="Ask any executive question (e.g. 'Why did Northern hub margins compress?' or 'What happens if palm oil prices surge 15%?')...">
+                <button id="btnAskAgent" class="btn-primary">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                    Synthesize Insight
+                </button>
+            </div>
+
+            <!-- Terminal Output Area -->
+            <div class="terminal-output-window" id="terminalOutput">
+                <div class="terminal-placeholder">
+                    <div class="pulse-indicator"></div>
+                    <div>Executive Decision Intelligence Agent is online. Select an inquiry above or enter a question to generate evidence-based C-Suite insights.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section: 5 Prescriptive Board Strategic Interventions -->
+        <div class="section-card">
+            <div class="section-header">
+                <div>
+                    <h2>6. Prescriptive Board Strategic Protocols</h2>
+                    <p class="section-sub">Autonomous action programs delivering ₹737+ Crore in Annual EBITDA Accretion</p>
+                </div>
+                <span class="badge-good">Total Enterprise Upside: +₹737 Cr EBITDA</span>
+            </div>
+
+            <div class="protocols-grid" id="protocolsGrid">
+                <!-- Injected dynamically via JavaScript -->
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="bottom-footer">
+            <p>Hindustan Unilever Limited — Project - 12: Executive Decision Intelligence</p>
+            <p>Confidential & Proprietary | Management Committee Analytics Engine | Localhost Port 5012</p>
+        </footer>
+
+    </div>
+
+    <script src="/static/js/dashboard.js"></script>
+</body>
+</html>
+

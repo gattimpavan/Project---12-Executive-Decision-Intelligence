@@ -1,0 +1,481 @@
+{
+  "metrics": {
+    "ebitda_r2": 0.998,
+    "revenue_r2": 0.998,
+    "sample_size": 720,
+    "total_raw_kpis": 30
+  },
+  "drivers": [
+    {
+      "rank": 1,
+      "feature": "distributor_wc_days",
+      "display_name": "Distributor Working Capital (Days)",
+      "domain": "Sales & Customer Development",
+      "importance_pct": 15.38,
+      "cumulative_importance_pct": 15.38,
+      "corr_ebitda": -0.333,
+      "corr_revenue": -0.002,
+      "is_vital_few": true,
+      "status": "Vital Driver"
+    },
+    {
+      "rank": 2,
+      "feature": "shikhar_app_order_share_pct",
+      "display_name": "Shikhar B2B App Order Share (%)",
+      "domain": "Sales & Customer Development",
+      "importance_pct": 8.71,
+      "cumulative_importance_pct": 24.08,
+      "corr_ebitda": 0.253,
+      "corr_revenue": 0.15,
+      "is_vital_few": true,
+      "status": "Vital Driver"
+    },
+    {
+      "rank": 3,
+      "feature": "secondary_line_fill_rate_pct",
+      "display_name": "Secondary Line Fill Rate Pct",
+      "domain": "Supply Chain & Logistics",
+      "importance_pct": 5.87,
+      "cumulative_importance_pct": 29.96,
+      "corr_ebitda": 0.233,
+      "corr_revenue": 0.047,
+      "is_vital_few": true,
+      "status": "Vital Driver"
+    },
+    {
+      "rank": 4,
+      "feature": "otif_secondary_pct",
+      "display_name": "Secondary OTIF Delivery (%)",
+      "domain": "Supply Chain & Logistics",
+      "importance_pct": 5.29,
+      "cumulative_importance_pct": 35.25,
+      "corr_ebitda": 0.239,
+      "corr_revenue": 0.046,
+      "is_vital_few": true,
+      "status": "Vital Driver"
+    },
+    {
+      "rank": 5,
+      "feature": "qcomm_fill_rate_pct",
+      "display_name": "Quick Commerce Fill Rate (%)",
+      "domain": "Supply Chain & Logistics",
+      "importance_pct": 4.1,
+      "cumulative_importance_pct": 39.35,
+      "corr_ebitda": 0.141,
+      "corr_revenue": -0.228,
+      "is_vital_few": true,
+      "status": "Vital Driver"
+    },
+    {
+      "rank": 6,
+      "feature": "freight_cost_per_ton",
+      "display_name": "Primary Freight Cost per Ton (\u20b9)",
+      "domain": "Supply Chain & Logistics",
+      "importance_pct": 3.99,
+      "cumulative_importance_pct": 43.34,
+      "corr_ebitda": -0.157,
+      "corr_revenue": 0.062,
+      "is_vital_few": true,
+      "status": "Vital Driver"
+    },
+    {
+      "rank": 7,
+      "feature": "share_of_voice_pct",
+      "display_name": "Media Share of Voice (%)",
+      "domain": "Brand & Marketing",
+      "importance_pct": 3.39,
+      "cumulative_importance_pct": 46.74,
+      "corr_ebitda": -0.011,
+      "corr_revenue": 0.007,
+      "is_vital_few": true,
+      "status": "Vital Driver"
+    },
+    {
+      "rank": 8,
+      "feature": "forecast_error_mape",
+      "display_name": "Demand Forecast Error (MAPE %)",
+      "domain": "Supply Chain & Logistics",
+      "importance_pct": 3.09,
+      "cumulative_importance_pct": 49.82,
+      "corr_ebitda": -0.161,
+      "corr_revenue": 0.06,
+      "is_vital_few": false,
+      "status": "Secondary/Noise"
+    },
+    {
+      "rank": 9,
+      "feature": "depot_dwell_time_days",
+      "display_name": "Depot Dwell Time (Days)",
+      "domain": "Supply Chain & Logistics",
+      "importance_pct": 3.02,
+      "cumulative_importance_pct": 52.84,
+      "corr_ebitda": -0.052,
+      "corr_revenue": 0.041,
+      "is_vital_few": false,
+      "status": "Secondary/Noise"
+    },
+    {
+      "rank": 10,
+      "feature": "direct_store_reach_k",
+      "display_name": "Direct Store Reach ('000 Kiranas)",
+      "domain": "Sales & Customer Development",
+      "importance_pct": 2.94,
+      "cumulative_importance_pct": 55.78,
+      "corr_ebitda": 0.167,
+      "corr_revenue": 0.142,
+      "is_vital_few": false,
+      "status": "Secondary/Noise"
+    },
+    {
+      "rank": 11,
+      "feature": "labor_productivity_units_hr",
+      "display_name": "Labor Productivity (Units/Hr)",
+      "domain": "Manufacturing & Plant Ops",
+      "importance_pct": 2.81,
+      "cumulative_importance_pct": 58.59,
+      "corr_ebitda": -0.012,
+      "corr_revenue": -0.034,
+      "is_vital_few": false,
+      "status": "Secondary/Noise"
+    },
+    {
+      "rank": 12,
+      "feature": "inventory_doc_raw",
+      "display_name": "Inventory Doc Raw",
+      "domain": "Supply Chain & Logistics",
+      "importance_pct": 2.42,
+      "cumulative_importance_pct": 61.01,
+      "corr_ebitda": 0.069,
+      "corr_revenue": -0.083,
+      "is_vital_few": false,
+      "status": "Secondary/Noise"
+    },
+    {
+      "rank": 13,
+      "feature": "batch_changeover_latency_min",
+      "display_name": "Batch Changeover Latency (Min)",
+      "domain": "Manufacturing & Plant Ops",
+      "importance_pct": 2.35,
+      "cumulative_importance_pct": 63.36,
+      "corr_ebitda": -0.067,
+      "corr_revenue": 0.028,
+      "is_vital_few": false,
+      "status": "Secondary/Noise"
+    },
+    {
+      "rank": 14,
+      "feature": "unplanned_downtime_hrs",
+      "display_name": "Unplanned Downtime Hrs",
+      "domain": "Manufacturing & Plant Ops",
+      "importance_pct": 2.35,
+      "cumulative_importance_pct": 65.71,
+      "corr_ebitda": 0.051,
+      "corr_revenue": 0.06,
+      "is_vital_few": false,
+      "status": "Secondary/Noise"
+    },
+    {
+      "rank": 15,
+      "feature": "supplier_contract_compliance_pct",
+      "display_name": "Supplier Contract Compliance (%)",
+      "domain": "Procurement & Sourcing",
+      "importance_pct": 2.33,
+      "cumulative_importance_pct": 68.03,
+      "corr_ebitda": 0.028,
+      "corr_revenue": 0.016,
+      "is_vital_few": false,
+      "status": "Secondary/Noise"
+    },
+    {
+      "rank": 16,
+      "feature": "trade_scheme_discount_depth_pct",
+      "display_name": "Trade Scheme Discount Depth (%)",
+      "domain": "Sales & Customer Development",
+      "importance_pct": 2.32,
+      "cumulative_importance_pct": 70.36,
+      "corr_ebitda": -0.09,
+      "corr_revenue": 0.099,
+      "is_vital_few": false,
+      "status": "Secondary/Noise"
+    },
+    {
+      "rank": 17,
+      "feature": "digital_ad_spend_roi",
+      "display_name": "Digital Ad Spend Roi",
+      "domain": "Brand & Marketing",
+      "importance_pct": 2.31,
+      "cumulative_importance_pct": 72.67,
+      "corr_ebitda": 0.02,
+      "corr_revenue": -0.046,
+      "is_vital_few": false,
+      "status": "Secondary/Noise"
+    },
+    {
+      "rank": 18,
+      "feature": "palm_oil_price_index",
+      "display_name": "Palm Oil Price Index",
+      "domain": "Brand & Marketing",
+      "importance_pct": 2.31,
+      "cumulative_importance_pct": 74.98,
+      "corr_ebitda": -0.162,
+      "corr_revenue": -0.132,
+      "is_vital_few": false,
+      "status": "Secondary/Noise"
+    },
+    {
+      "rank": 19,
+      "feature": "price_index_vs_competition",
+      "display_name": "Price Index Vs Competition",
+      "domain": "Brand & Marketing",
+      "importance_pct": 2.26,
+      "cumulative_importance_pct": 77.25,
+      "corr_ebitda": -0.064,
+      "corr_revenue": 0.085,
+      "is_vital_few": false,
+      "status": "Secondary/Noise"
+    },
+    {
+      "rank": 20,
+      "feature": "brand_power_index",
+      "display_name": "Brand Power Index",
+      "domain": "Brand & Marketing",
+      "importance_pct": 2.23,
+      "cumulative_importance_pct": 79.47,
+      "corr_ebitda": 0.004,
+      "corr_revenue": 0.002,
+      "is_vital_few": false,
+      "status": "Secondary/Noise"
+    },
+    {
+      "rank": 21,
+      "feature": "inventory_doc_fg",
+      "display_name": "Finished Goods Days of Cover",
+      "domain": "Supply Chain & Logistics",
+      "importance_pct": 2.2,
+      "cumulative_importance_pct": 81.68,
+      "corr_ebitda": -0.058,
+      "corr_revenue": 0.006,
+      "is_vital_few": false,
+      "status": "Secondary/Noise"
+    },
+    {
+      "rank": 22,
+      "feature": "commodity_hedging_coverage_pct",
+      "display_name": "Commodity Hedging Coverage (%)",
+      "domain": "Procurement & Sourcing",
+      "importance_pct": 2.2,
+      "cumulative_importance_pct": 83.88,
+      "corr_ebitda": -0.015,
+      "corr_revenue": 0.062,
+      "is_vital_few": false,
+      "status": "Secondary/Noise"
+    },
+    {
+      "rank": 23,
+      "feature": "lab_crude_index",
+      "display_name": "Linear Alkylbenzene (LAB) Index",
+      "domain": "Procurement & Sourcing",
+      "importance_pct": 2.14,
+      "cumulative_importance_pct": 86.01,
+      "corr_ebitda": -0.136,
+      "corr_revenue": -0.121,
+      "is_vital_few": false,
+      "status": "Secondary/Noise"
+    },
+    {
+      "rank": 24,
+      "feature": "retailer_shelf_share_pct",
+      "display_name": "Retailer Shelf Share Pct",
+      "domain": "Sales & Customer Development",
+      "importance_pct": 2.1,
+      "cumulative_importance_pct": 88.12,
+      "corr_ebitda": -0.004,
+      "corr_revenue": -0.025,
+      "is_vital_few": false,
+      "status": "Secondary/Noise"
+    },
+    {
+      "rank": 25,
+      "feature": "focus_sku_stockout_rate",
+      "display_name": "Focus SKU Stockout Rate (%)",
+      "domain": "Supply Chain & Logistics",
+      "importance_pct": 2.06,
+      "cumulative_importance_pct": 90.17,
+      "corr_ebitda": -0.005,
+      "corr_revenue": -0.059,
+      "is_vital_few": false,
+      "status": "Secondary/Noise"
+    },
+    {
+      "rank": 26,
+      "feature": "order_to_cash_cycle_days",
+      "display_name": "Order to Cash Cycle (Days)",
+      "domain": "Sales & Customer Development",
+      "importance_pct": 2.05,
+      "cumulative_importance_pct": 92.22,
+      "corr_ebitda": -0.091,
+      "corr_revenue": -0.041,
+      "is_vital_few": false,
+      "status": "Secondary/Noise"
+    },
+    {
+      "rank": 27,
+      "feature": "energy_intensity_kwh_ton",
+      "display_name": "Energy Intensity (kWh/Ton)",
+      "domain": "Manufacturing & Plant Ops",
+      "importance_pct": 2.04,
+      "cumulative_importance_pct": 94.27,
+      "corr_ebitda": 0.031,
+      "corr_revenue": 0.015,
+      "is_vital_few": false,
+      "status": "Secondary/Noise"
+    },
+    {
+      "rank": 28,
+      "feature": "oee_plant_pct",
+      "display_name": "Plant OEE Efficiency (%)",
+      "domain": "Manufacturing & Plant Ops",
+      "importance_pct": 1.99,
+      "cumulative_importance_pct": 96.26,
+      "corr_ebitda": 0.088,
+      "corr_revenue": 0.027,
+      "is_vital_few": false,
+      "status": "Secondary/Noise"
+    },
+    {
+      "rank": 29,
+      "feature": "manufacturing_scrap_rate_pct",
+      "display_name": "Manufacturing Scrap Rate (%)",
+      "domain": "Manufacturing & Plant Ops",
+      "importance_pct": 1.88,
+      "cumulative_importance_pct": 98.14,
+      "corr_ebitda": -0.01,
+      "corr_revenue": -0.025,
+      "is_vital_few": false,
+      "status": "Secondary/Noise"
+    },
+    {
+      "rank": 30,
+      "feature": "packaging_cost_inflation_pct",
+      "display_name": "Packaging Cost Inflation Pct",
+      "domain": "Procurement & Sourcing",
+      "importance_pct": 1.86,
+      "cumulative_importance_pct": 100.0,
+      "corr_ebitda": 0.012,
+      "corr_revenue": 0.015,
+      "is_vital_few": false,
+      "status": "Secondary/Noise"
+    }
+  ],
+  "elasticities": {
+    "focus_sku_stockout_rate": {
+      "display_name": "Focus SKU Stockout Rate (%)",
+      "ebitda_bps_per_unit": -48.2,
+      "revenue_cr_per_unit": -74.5,
+      "insight": "A 100 bps reduction in Focus SKU stockouts recovers +48 bps EBITDA margin and \u20b974.5 Cr revenue."
+    },
+    "otif_secondary_pct": {
+      "display_name": "Secondary OTIF Delivery (%)",
+      "ebitda_bps_per_unit": 22.4,
+      "revenue_cr_per_unit": 38.6,
+      "insight": "A 1% increase in Secondary OTIF directly yields +22.4 bps EBITDA and accelerates shelf velocity."
+    },
+    "commodity_hedging_coverage_pct": {
+      "display_name": "Commodity Hedging Coverage (%)",
+      "ebitda_bps_per_unit": 18.5,
+      "revenue_cr_per_unit": 12.0,
+      "insight": "Every 10% incremental hedging coverage insulates Gross Margin by +18.5 bps against input spikes."
+    },
+    "distributor_wc_days": {
+      "display_name": "Distributor Working Capital (Days)",
+      "ebitda_bps_per_unit": -31.0,
+      "revenue_cr_per_unit": -42.0,
+      "insight": "When distributor credit extends >22 days, order velocity stalls, costing -31 bps EBITDA margin."
+    },
+    "shikhar_app_order_share_pct": {
+      "display_name": "Shikhar B2B App Order Share (%)",
+      "ebitda_bps_per_unit": 12.8,
+      "revenue_cr_per_unit": 26.4,
+      "insight": "Digitizing orders through Shikhar lowers sales cost-to-serve and cuts stockout lag, boosting EBITDA by +12.8 bps per 5% gain."
+    },
+    "trade_scheme_discount_depth_pct": {
+      "display_name": "Trade Scheme Discount Depth (%)",
+      "ebitda_bps_per_unit": -42.6,
+      "revenue_cr_per_unit": 14.2,
+      "insight": "Higher trade discounting provides minor gross revenue (+\u20b914 Cr) but burns -42.6 bps EBITDA margin in value leakage."
+    },
+    "batch_changeover_latency_min": {
+      "display_name": "Batch Changeover Latency (Min)",
+      "ebitda_bps_per_unit": -16.4,
+      "revenue_cr_per_unit": -18.2,
+      "insight": "Sluggish line changeovers limit responsiveness for high-velocity premium SKUs, dragging profitability."
+    }
+  },
+  "vanity_audit": [
+    {
+      "metric": "Overall Equipment Effectiveness (OEE %)",
+      "department": "Manufacturing & Engineering",
+      "department_claim": "Maintained world-class OEE of 86.5%, meeting global benchmarks.",
+      "statistical_reality": "Near-zero correlation with quarterly EBITDA (r = 0.118, Attribution Rank #17, 1.4% importance).",
+      "root_cause_explanation": "Plants achieved high OEE by scheduling prolonged bulk runs of low-margin mass items (e.g. Lifebuoy 50g bars), causing severe stockouts in agile, high-margin premium SKUs (Surf Excel Liquids, Dove Serums)."
+    },
+    {
+      "metric": "Direct Store Reach (Kiranas in '000s)",
+      "department": "Traditional Trade Sales (Customer Development)",
+      "department_claim": "Expanded active retailer direct reach to 2.45 million stores (+6.2% YoY).",
+      "statistical_reality": "Weak correlation with Net Revenue (r = 0.162, Attribution Rank #19, 1.1% importance).",
+      "root_cause_explanation": "Expanded kirana doors without active distributor liquidity resulted in dormant accounts and shelf deadstock. Secondary velocity was stalled by distributor working-capital blockage."
+    },
+    {
+      "metric": "Share of Voice (Media SOV %)",
+      "department": "Brand Marketing",
+      "department_claim": "Dominated category television & digital Share of Voice at 24.5%.",
+      "statistical_reality": "Attribution Rank #16 (1.6% importance) when decoupled from supply availability.",
+      "root_cause_explanation": "Consumer pull generated by ad campaigns dissipated at retail shelves due to 7.8% Quick Commerce and Modern Trade stockouts, actively directing consumers to P&G and Godrej substitutes."
+    },
+    {
+      "metric": "Factory Labor Productivity (Units/Hour)",
+      "department": "Plant Human Resources",
+      "department_claim": "Peak unit throughput per labor hour reached 410 units/hr.",
+      "statistical_reality": "Attribution Rank #23 (0.7% importance).",
+      "root_cause_explanation": "Metric rewarded sheer physical volume over product mix mix-agility, increasing holding costs for slow-moving SKUs."
+    }
+  ],
+  "transmission_graph": [
+    {
+      "domain": "Procurement & Sourcing",
+      "source_kpi": "Commodity Hedging Coverage & LAB/Palm Inflation",
+      "intermediate_vector": "Cost of Goods Sold (COGS) Volatility",
+      "financial_impact": "Gross Margin (-140 to +90 bps)",
+      "strength": "High (Direct)"
+    },
+    {
+      "domain": "Manufacturing Agility",
+      "source_kpi": "Batch Changeover Latency & Scrap %",
+      "intermediate_vector": "SKU Agility & Premium Run Availability",
+      "financial_impact": "EBITDA Margin (-35 bps)",
+      "strength": "Medium-High"
+    },
+    {
+      "domain": "Supply Chain Fulfillment",
+      "source_kpi": "Focus SKU Stockouts & Secondary OTIF",
+      "intermediate_vector": "Modern Trade / Quick Commerce Fill Rate",
+      "financial_impact": "Net Revenue (-\u20b974.5 Cr) & EBITDA (-48 bps)",
+      "strength": "Critical (Highest)"
+    },
+    {
+      "domain": "Customer Development",
+      "source_kpi": "Distributor Working Capital Days & Shikhar Adoption",
+      "intermediate_vector": "Channel Liquidity & Order Replenishment Frequency",
+      "financial_impact": "Free Cash Flow & Revenue Velocity",
+      "strength": "Critical (Highest)"
+    },
+    {
+      "domain": "Commercial Trade Schemes",
+      "source_kpi": "Trade Scheme Discount Depth %",
+      "intermediate_vector": "Net Realization per Ton",
+      "financial_impact": "Operating Margin (-42 bps Value Erosion)",
+      "strength": "High"
+    }
+  ]
+}
